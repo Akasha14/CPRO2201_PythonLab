@@ -1,6 +1,8 @@
 
 # Step 1
 class Book:
+
+    # Constructor.
     def __init__(self, title, author, genre):
         self.title = title
         self.author = author
@@ -11,7 +13,6 @@ class Book:
     def borrow(self):
         if self.available:
             self.available = False
-            print(f"You borrowed the book: {self.title}")
         else:
             print(f"{self.title} is in use!")
 
@@ -19,11 +20,12 @@ class Book:
     def return_book(self):
         if not self.available:
             self.available = True
-            print(f"You returned the book: {self.title}")
         else:
             print("Book was never taken!")
 
     # Step 3.3
     def display_info(self):
+        # Status to print.
         availability_status = "Available" if self.available else "Not Available"
+
         print(f"{self.title}, written by: {self.author}, {self.genre}. Availability: {availability_status}")
