@@ -1,0 +1,9 @@
+INFO: System started at 10:00 AM
+WARNING: Disk space is running low
+ERROR: Unable to connect to database
+INFO: User logged in successfully
+ERROR: Failed to load configuration
+DEBUG: Checking system status
+INFO: System shutdown at 11:00 PM
+WARNING: CPU temperature is high
+ERROR: Network timeout occurred 
