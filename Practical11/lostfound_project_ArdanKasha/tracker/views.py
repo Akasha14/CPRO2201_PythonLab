@@ -6,6 +6,7 @@ def item_list(request):
     items = Item.objects.all().order_by('-date_reported')
     return render(request, 'tracker/item_list.html', {'items': items})
 
+
 def item_create(request):
     if request.method == 'POST':
         form = ItemForm(request.POST)
@@ -16,6 +17,7 @@ def item_create(request):
         form = ItemForm()
     return render(request, 'tracker/item_form.html', {'form': form})
     
+
 def item_update(request, pk):
     item = get_object_or_404(Item, pk=pk)
     if request.method == 'POST':
@@ -27,9 +29,11 @@ def item_update(request, pk):
         form = ItemForm(instance=item)
     return render(request, 'tracker/item_form.html', {'form': form})
 
+
 def item_delete(request, pk):
     item = get_object_or_404(Item, pk=pk)
     if request.method == 'POST':
         item.delete()
         return redirect('item_list')
     return render(request, 'tracker/item_confirm_delete.html', {'item': item})
+

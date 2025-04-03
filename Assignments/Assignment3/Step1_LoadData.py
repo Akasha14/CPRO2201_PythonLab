@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 csv_data = pd.read_csv('sales_dataset.csv')
 
 # Print first five rows.
-print("First five rows of the dataset:")
+print("\nFirst five rows of the dataset:")
 print(csv_data.head())
 
 # Display basic statistics.
